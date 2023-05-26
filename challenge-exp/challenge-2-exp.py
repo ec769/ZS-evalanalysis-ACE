@@ -41,7 +41,7 @@ def automate_head(text):
             entities.append(str(item))
     seen_noun = False
     for token in doc:
-        if ((token.pos_ == 'VERB' and seen_noun == True)):# or str(token) in ['who','which','that']):
+        if ((token.pos_ == 'VERB' and seen_noun == True) or str(token) in ['who','which','that']):
             remove = str(token)
             break
         if token.pos_ == 'NOUN':
@@ -105,9 +105,9 @@ def main(fname):
             continue
         if " " in ace_head:
             total_ace_mult = total_ace_mult + 1
-        if aut_head[0] in ['.',',',' ']:
+        if len(aut_head)>0 and aut_head[0] in ['.',',',' ']:
             aut_head = aut_head[1:]
-        if aut_head[len(aut_head)-1] in ['.',',',' ']:
+        if len(aut_head)>0 and aut_head[len(aut_head)-1] in ['.',',',' ']:
             aut_head = aut_head[:len(aut_head)-1]
         if aut_head != ace_head:
             if " " in head:
@@ -118,6 +118,9 @@ def main(fname):
     total_ace_nonmult = total- total_ace_mult
     print("Proportion of discrepancies when ACE considers a head as multiple words:",diff_mult/total_ace_mult)
     print("Proportion of discrepancies when ACE considers a head as a single word:",diff_nonmult/total_ace_nonmult)
+
+
+
 
 
 

@@ -13,10 +13,12 @@ class WhitespaceTokenizer:
     def __call__(self, text):
         words = text.split(" ")
         spaces = [True] * len(words)
+        # Avoid zero-length tokens
         for i, word in enumerate(words):
             if word == "":
                 words[i] = " "
                 spaces[i] = False
+        # Remove the final trailing space
         if words[-1] == " ":
             words = words[0:-1]
             spaces = spaces[0:-1]
@@ -103,19 +105,19 @@ def main(fname):
             continue
         if " " in ace_head:
             total_ace_mult = total_ace_mult + 1
+        if aut_head[0] in ['.',',',' ']:
+            aut_head = aut_head[1:]
+        if aut_head[len(aut_head)-1] in ['.',',',' ']:
+            aut_head = aut_head[:len(aut_head)-1]
         if aut_head != ace_head:
             if " " in head:
                 diff_mult = diff_mult + 1
-                print(aut_head,"      ",ace_head)
             else:
                 diff_nonmult = diff_nonmult + 1
         total = total + 1
     total_ace_nonmult = total- total_ace_mult
     print("Proportion of discrepancies when ACE considers a head as multiple words:",diff_mult/total_ace_mult)
     print("Proportion of discrepancies when ACE considers a head as a single word:",diff_nonmult/total_ace_nonmult)
-
-
-
 
 
 

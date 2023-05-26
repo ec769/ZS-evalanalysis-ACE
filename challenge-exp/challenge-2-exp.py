@@ -83,7 +83,7 @@ def main(fname):
             else:
                 diff_nonmult = diff_nonmult + 1
         total = total + 1
-    total_ace_nonmult = total- total_ace_mult
+    total_ace_nonmult = total - total_ace_mult
     print("Proportion of discrepancies when ACE considers a head as multiple words:",diff_mult/total_ace_mult)
     print("Proportion of discrepancies when ACE considers a head as a single word:",diff_nonmult/total_ace_nonmult)
 

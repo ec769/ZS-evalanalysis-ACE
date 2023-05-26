@@ -35,7 +35,7 @@ To replicate analysis and use code for recommendation 2, run the following comma
 ```
 python ./construct-preprocess-data/scripts/data/ace-event/parse_ace_event_mod2.py [output-name]
 ```
-Next, exit the virtual environment and pip install Spacy 3.4. Then run the command: 
+Next, exit the virtual environment and pip install a version of Spacy 3; we use Spacy 3.4. Then run the command: 
 ```
 python ./challenge-exp/challenge-2-exp.py [output-name]
 ```

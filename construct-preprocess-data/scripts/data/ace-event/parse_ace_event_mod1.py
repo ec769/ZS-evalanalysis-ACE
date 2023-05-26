@@ -825,8 +825,6 @@ def main():
                         help="Treat times and values as entities and include them as event arguments.")
     parser.add_argument("--include_pronouns", action="store_true",
                         help="Include pronouns as entities and include them as event arguments.")
-    parser.add_argument("--include_event_coreference", action="store_true",
-                        help="*Include event coreference labels stored in 'event_clusters'.")
     args = parser.parse_args()
 
     output_dir = f"./construct-preprocess-data/data/ace-event/processed-data/{args.output_name}/json"
@@ -843,7 +841,7 @@ def main():
                 real_entities_only=(not args.include_times_and_values),
                 include_pronouns=args.include_pronouns,
                 include_entity_coreference=True,
-                include_event_coreference=args.include_event_coreference)
+                include_event_coreference=False)
 
 
 if __name__ == "__main__":

@@ -101,6 +101,8 @@ def main(fname):
         extent = tup[1]
         aut_head = automate_head(extent).replace("-","")
         ace_head = head.replace("-","")
+        if "and" in extent:
+            continue
         if " " in ace_head:
             total_ace_mult = total_ace_mult + 1
         if len(aut_head)>0 and aut_head[0] in ['.',',',' ']:
@@ -116,8 +118,6 @@ def main(fname):
     total_ace_nonmult = total- total_ace_mult
     print("Proportion of discrepancies when ACE considers a head as multiple words:",diff_mult/total_ace_mult)
     print("Proportion of discrepancies when ACE considers a head as a single word:",diff_nonmult/total_ace_nonmult)
-
-
 
 
 

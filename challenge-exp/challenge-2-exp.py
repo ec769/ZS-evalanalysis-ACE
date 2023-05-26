@@ -101,8 +101,6 @@ def main(fname):
         extent = tup[1]
         aut_head = automate_head(extent).replace("-","")
         ace_head = head.replace("-","")
-        if "and" in extent:
-            continue
         if " " in ace_head:
             total_ace_mult = total_ace_mult + 1
         if len(aut_head)>0 and aut_head[0] in ['.',',',' ']:

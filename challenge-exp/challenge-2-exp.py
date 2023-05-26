@@ -80,7 +80,6 @@ def main(fname):
         if aut_head != ace_head:
             if " " in head:
                 diff_mult = diff_mult + 1
-                print(aut_head,"      ",ace_head)
             else:
                 diff_nonmult = diff_nonmult + 1
         total = total + 1

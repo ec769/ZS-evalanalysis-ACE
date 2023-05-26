@@ -1,8 +1,8 @@
 This is the repository for the paper: Evaluating Zero-Shot Event Structures: Recommendations for Automatic Content Extraction (ACE) Annotations.
 
-We adapted much of Wadden et al's pre-processing; thanks a lot to the authors.
+We adapted much of Wadden et al's pre-processing; thanks a lot to the authors!
 
-The repository contains code for the full analyses in the paper (provided the same pre-processing).
+The repository contains code for the full analyses in the paper.
 
 To run the code, set up a virtualenv that uses an old version of Spacy.
 
@@ -25,7 +25,7 @@ To replicate analysis and use code for recommendation 1, run the following comma
 ```
 python ./construct-preprocess-data/scripts/data/ace-event/parse_ace_event_mod1.py [output-name]
 ```
-To run analysis for recommendation 1, run the command: 
+Then run the command: 
 ```
 python ./challenge-exp/challenge-1-exp.py [output-name]
 ```
@@ -35,7 +35,7 @@ To replicate analysis and use code for recommendation 2, run the following comma
 ```
 python ./construct-preprocess-data/scripts/data/ace-event/parse_ace_event_mod2.py [output-name]
 ```
-To run analysis for recommendation 2, run the command: 
+Then run the command: 
 ```
 python ./challenge-exp/challenge-2-exp.py [output-name]
 ```

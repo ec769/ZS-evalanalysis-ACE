@@ -1,2 +1,17 @@
-spacy==2.0.18
-numpy
+# Usage: `pip install -r requirements.txt``
+
+
+allennlp==1.1.0
+allennlp_models==1.1.0
+
+
+en_core_web_sm
+pandas==0.25.2
+beautifulsoup4==4.8.1
+lxml
+python-Levenshtein
+
+
+
+optuna>=2.1.0
+

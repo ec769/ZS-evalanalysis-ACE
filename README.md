@@ -11,8 +11,7 @@ To run the code, set up a virtualenv that uses an old version of Spacy.
 conda deactivate
 conda create --name ace-event-preprocess python=3.7
 conda activate ace-event-preprocess
-pip install -r scripts/data/ace-event/requirements.txt
-pip install nltk
+pip install -r ./construct-preprocess-data/scripts/data/ace-event/requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
